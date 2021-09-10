@@ -1,5 +1,6 @@
-package foo
-object Example{
+package ticket4Sale
+
+object Ticket4Sale {
   def main(args: Array[String]): Unit = {
     println(hello())
   }
