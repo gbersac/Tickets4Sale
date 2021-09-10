@@ -1,0 +1,14 @@
+{
+    "value": [
+        [
+            "foo",
+            "ref:4ffb8d66:C:\\Users\\Guillaume\\prog\\Tickets4Sale\\.bloop\\foo.json"
+        ],
+        [
+            "foo.test",
+            "ref:e34b4f9d:C:\\Users\\Guillaume\\prog\\Tickets4Sale\\.bloop\\foo.test.json"
+        ]
+    ],
+    "valueHash": 1245616507,
+    "inputsHash": 1020880077
+}

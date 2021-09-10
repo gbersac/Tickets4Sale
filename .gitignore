@@ -1,0 +1,25 @@
+target/
+
+*.class
+*.log
+
+# sbt specific
+.cache/
+.history/
+.lib/
+.bsp/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+project/project/
+
+# ignore metals output
+.bloop
+.metals/
+project/metals.sbt
+
+# ide files
+.vscode/

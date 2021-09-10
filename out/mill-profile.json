@@ -1,0 +1,222 @@
+[
+    {
+        "label": "foo.sources",
+        "millis": 41,
+        "cached": false
+    },
+    {
+        "label": "foo.generatedSources",
+        "millis": 7,
+        "cached": false
+    },
+    {
+        "label": "foo.allSources",
+        "millis": 7,
+        "cached": false
+    },
+    {
+        "label": "foo.test.sources",
+        "millis": 8,
+        "cached": false
+    },
+    {
+        "label": "foo.test.generatedSources",
+        "millis": 3,
+        "cached": false
+    },
+    {
+        "label": "foo.test.allSources",
+        "millis": 6,
+        "cached": false
+    },
+    {
+        "label": "mill.contrib.bloop.BloopImpl.moduleSourceMap",
+        "millis": 9,
+        "cached": false
+    },
+    {
+        "label": "foo.unmanagedClasspath",
+        "millis": 9,
+        "cached": false
+    },
+    {
+        "label": "foo.scalaVersion",
+        "millis": 6,
+        "cached": false
+    },
+    {
+        "label": "foo.platformSuffix",
+        "millis": 5,
+        "cached": false
+    },
+    {
+        "label": "foo.compileIvyDeps",
+        "millis": 2,
+        "cached": false
+    },
+    {
+        "label": "foo.transitiveCompileIvyDeps",
+        "millis": 7,
+        "cached": false
+    },
+    {
+        "label": "foo.ivyDeps",
+        "millis": 2,
+        "cached": false
+    },
+    {
+        "label": "foo.transitiveIvyDeps",
+        "millis": 3,
+        "cached": false
+    },
+    {
+        "label": "foo.scalaOrganization",
+        "millis": 5,
+        "cached": false
+    },
+    {
+        "label": "foo.scalaLibraryIvyDeps",
+        "millis": 35,
+        "cached": false
+    },
+    {
+        "label": "foo.resources",
+        "millis": 6,
+        "cached": false
+    },
+    {
+        "label": "foo.scalacPluginIvyDeps",
+        "millis": 3,
+        "cached": false
+    },
+    {
+        "label": "foo.scalacPluginClasspath",
+        "millis": 347,
+        "cached": false
+    },
+    {
+        "label": "foo.scalacOptions",
+        "millis": 2,
+        "cached": false
+    },
+    {
+        "label": "foo.scalaCompilerClasspath",
+        "millis": 339,
+        "cached": false
+    },
+    {
+        "label": "foo.javacOptions",
+        "millis": 2,
+        "cached": false
+    },
+    {
+        "label": "foo.forkArgs",
+        "millis": 3,
+        "cached": false
+    },
+    {
+        "label": "foo.mainClass",
+        "millis": 4,
+        "cached": false
+    },
+    {
+        "label": "foo.bloop.config",
+        "millis": 102,
+        "cached": false
+    },
+    {
+        "label": "foo.bloop.writeConfig",
+        "millis": 31,
+        "cached": false
+    },
+    {
+        "label": "foo.test.unmanagedClasspath",
+        "millis": 2,
+        "cached": false
+    },
+    {
+        "label": "foo.test.scalaVersion",
+        "millis": 4,
+        "cached": false
+    },
+    {
+        "label": "foo.test.platformSuffix",
+        "millis": 3,
+        "cached": false
+    },
+    {
+        "label": "foo.test.compileIvyDeps",
+        "millis": 6,
+        "cached": false
+    },
+    {
+        "label": "foo.test.transitiveCompileIvyDeps",
+        "millis": 3,
+        "cached": false
+    },
+    {
+        "label": "foo.test.ivyDeps",
+        "millis": 7,
+        "cached": false
+    },
+    {
+        "label": "foo.test.transitiveIvyDeps",
+        "millis": 7,
+        "cached": false
+    },
+    {
+        "label": "foo.test.scalaOrganization",
+        "millis": 5,
+        "cached": false
+    },
+    {
+        "label": "foo.test.scalaLibraryIvyDeps",
+        "millis": 6,
+        "cached": false
+    },
+    {
+        "label": "foo.test.resources",
+        "millis": 6,
+        "cached": false
+    },
+    {
+        "label": "foo.test.scalaCompilerClasspath",
+        "millis": 85,
+        "cached": false
+    },
+    {
+        "label": "foo.test.testFrameworks",
+        "millis": 6,
+        "cached": false
+    },
+    {
+        "label": "foo.test.testFramework",
+        "millis": 5,
+        "cached": false
+    },
+    {
+        "label": "foo.test.forkArgs",
+        "millis": 2,
+        "cached": false
+    },
+    {
+        "label": "foo.test.mainClass",
+        "millis": 2,
+        "cached": false
+    },
+    {
+        "label": "foo.test.bloop.config",
+        "millis": 121,
+        "cached": false
+    },
+    {
+        "label": "foo.test.bloop.writeConfig",
+        "millis": 12,
+        "cached": false
+    },
+    {
+        "label": "mill.contrib.bloop.BloopImpl.install",
+        "millis": 7,
+        "cached": false
+    }
+]

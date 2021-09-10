@@ -1,0 +1,141 @@
+{
+    "value": {
+        "version": "1.4.0",
+        "project": {
+            "name": "foo",
+            "directory": "C:\\Users\\Guillaume\\prog\\Tickets4Sale\\foo",
+            "workspaceDir": [
+                "C:\\Users\\Guillaume\\prog\\Tickets4Sale"
+            ],
+            "sources": [
+                "C:\\Users\\Guillaume\\prog\\Tickets4Sale\\foo\\src"
+            ],
+            "sourcesGlobs": [
+                
+            ],
+            "sourceRoots": [
+                
+            ],
+            "dependencies": [
+                
+            ],
+            "classpath": [
+                "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.6\\scala-library-2.13.6.jar"
+            ],
+            "out": "C:\\Users\\Guillaume\\prog\\Tickets4Sale\\.bloop\\out\\foo",
+            "classesDir": "C:\\Users\\Guillaume\\prog\\Tickets4Sale\\.bloop\\out\\foo\\classes",
+            "resources": [
+                [
+                    "C:\\Users\\Guillaume\\prog\\Tickets4Sale\\foo\\resources"
+                ]
+            ],
+            "scala": [
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-compiler",
+                    "version": "2.13.6",
+                    "options": [
+                        
+                    ],
+                    "jars": [
+                        "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-compiler\\2.13.6\\scala-compiler-2.13.6.jar",
+                        "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-reflect\\2.13.6\\scala-reflect-2.13.6.jar",
+                        "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.6\\scala-library-2.13.6.jar",
+                        "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline\\3.19.0\\jline-3.19.0.jar",
+                        "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\net\\java\\dev\\jna\\jna\\5.3.1\\jna-5.3.1.jar"
+                    ],
+                    "analysis": [
+                        
+                    ],
+                    "setup": [
+                        
+                    ]
+                }
+            ],
+            "java": [
+                {
+                    "options": [
+                        
+                    ]
+                }
+            ],
+            "sbt": [
+                
+            ],
+            "test": [
+                
+            ],
+            "platform": [
+                {
+                    "$type": "bloop.config.Config.Platform.Jvm",
+                    "config": {
+                        "$type": "bloop.config.Config.JvmConfig",
+                        "home": [
+                            "C:\\Users\\Guillaume\\.jabba\\jdk\\adopt@1.11.0-11"
+                        ],
+                        "options": [
+                            "-Duser.dir=C:\\Users\\Guillaume\\prog\\Tickets4Sale"
+                        ]
+                    },
+                    "mainClass": [
+                        
+                    ],
+                    "runtimeConfig": [
+                        
+                    ],
+                    "classpath": [
+                        
+                    ],
+                    "resources": [
+                        [
+                            "C:\\Users\\Guillaume\\prog\\Tickets4Sale\\foo\\resources"
+                        ]
+                    ]
+                }
+            ],
+            "resolution": [
+                {
+                    "modules": [
+                        {
+                            "organization": "org.scala-lang",
+                            "name": "scala-library",
+                            "version": "2.13.6",
+                            "configurations": [
+                                
+                            ],
+                            "artifacts": [
+                                {
+                                    "name": "scala-library",
+                                    "classifier": [
+                                        
+                                    ],
+                                    "checksum": [
+                                        
+                                    ],
+                                    "path": "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.6\\scala-library-2.13.6.jar"
+                                },
+                                {
+                                    "name": "scala-library",
+                                    "classifier": [
+                                        "sources"
+                                    ],
+                                    "checksum": [
+                                        
+                                    ],
+                                    "path": "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.6\\scala-library-2.13.6-sources.jar"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "tags": [
+                [
+                    "library"
+                ]
+            ]
+        }
+    },
+    "valueHash": -2144653316,
+    "inputsHash": -2072972776
+}

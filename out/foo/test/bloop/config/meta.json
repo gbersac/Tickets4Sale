@@ -1,0 +1,282 @@
+{
+    "value": {
+        "version": "1.4.0",
+        "project": {
+            "name": "foo.test",
+            "directory": "C:\\Users\\Guillaume\\prog\\Tickets4Sale\\foo\\test",
+            "workspaceDir": [
+                "C:\\Users\\Guillaume\\prog\\Tickets4Sale"
+            ],
+            "sources": [
+                "C:\\Users\\Guillaume\\prog\\Tickets4Sale\\foo\\test\\src"
+            ],
+            "sourcesGlobs": [
+                
+            ],
+            "sourceRoots": [
+                
+            ],
+            "dependencies": [
+                "foo"
+            ],
+            "classpath": [
+                "C:\\Users\\Guillaume\\prog\\Tickets4Sale\\.bloop\\out\\foo\\classes",
+                "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\utest_2.13\\0.7.10\\utest_2.13-0.7.10.jar",
+                "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.6\\scala-library-2.13.6.jar",
+                "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\test-interface\\1.0\\test-interface-1.0.jar",
+                "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\portable-scala\\portable-scala-reflect_2.13\\0.1.1\\portable-scala-reflect_2.13-0.1.1.jar",
+                "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-reflect\\2.13.6\\scala-reflect-2.13.6.jar"
+            ],
+            "out": "C:\\Users\\Guillaume\\prog\\Tickets4Sale\\.bloop\\out\\foo.test",
+            "classesDir": "C:\\Users\\Guillaume\\prog\\Tickets4Sale\\.bloop\\out\\foo.test\\classes",
+            "resources": [
+                [
+                    "C:\\Users\\Guillaume\\prog\\Tickets4Sale\\foo\\test\\resources"
+                ]
+            ],
+            "scala": [
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-compiler",
+                    "version": "2.13.6",
+                    "options": [
+                        
+                    ],
+                    "jars": [
+                        "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-compiler\\2.13.6\\scala-compiler-2.13.6.jar",
+                        "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-reflect\\2.13.6\\scala-reflect-2.13.6.jar",
+                        "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.6\\scala-library-2.13.6.jar",
+                        "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline\\3.19.0\\jline-3.19.0.jar",
+                        "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\net\\java\\dev\\jna\\jna\\5.3.1\\jna-5.3.1.jar"
+                    ],
+                    "analysis": [
+                        
+                    ],
+                    "setup": [
+                        
+                    ]
+                }
+            ],
+            "java": [
+                {
+                    "options": [
+                        
+                    ]
+                }
+            ],
+            "sbt": [
+                
+            ],
+            "test": [
+                {
+                    "frameworks": [
+                        {
+                            "names": [
+                                "utest.runner.Framework"
+                            ]
+                        }
+                    ],
+                    "options": {
+                        "excludes": [
+                            
+                        ],
+                        "arguments": [
+                            
+                        ]
+                    }
+                }
+            ],
+            "platform": [
+                {
+                    "$type": "bloop.config.Config.Platform.Jvm",
+                    "config": {
+                        "$type": "bloop.config.Config.JvmConfig",
+                        "home": [
+                            "C:\\Users\\Guillaume\\.jabba\\jdk\\adopt@1.11.0-11"
+                        ],
+                        "options": [
+                            "-Duser.dir=C:\\Users\\Guillaume\\prog\\Tickets4Sale"
+                        ]
+                    },
+                    "mainClass": [
+                        
+                    ],
+                    "runtimeConfig": [
+                        
+                    ],
+                    "classpath": [
+                        
+                    ],
+                    "resources": [
+                        [
+                            "C:\\Users\\Guillaume\\prog\\Tickets4Sale\\foo\\test\\resources"
+                        ]
+                    ]
+                }
+            ],
+            "resolution": [
+                {
+                    "modules": [
+                        {
+                            "organization": "org.scala-sbt",
+                            "name": "test-interface",
+                            "version": "1.0",
+                            "configurations": [
+                                
+                            ],
+                            "artifacts": [
+                                {
+                                    "name": "test-interface",
+                                    "classifier": [
+                                        
+                                    ],
+                                    "checksum": [
+                                        
+                                    ],
+                                    "path": "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\test-interface\\1.0\\test-interface-1.0.jar"
+                                },
+                                {
+                                    "name": "test-interface",
+                                    "classifier": [
+                                        "sources"
+                                    ],
+                                    "checksum": [
+                                        
+                                    ],
+                                    "path": "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\test-interface\\1.0\\test-interface-1.0-sources.jar"
+                                }
+                            ]
+                        },
+                        {
+                            "organization": "com.lihaoyi",
+                            "name": "utest_2.13",
+                            "version": "0.7.10",
+                            "configurations": [
+                                
+                            ],
+                            "artifacts": [
+                                {
+                                    "name": "utest_2.13",
+                                    "classifier": [
+                                        
+                                    ],
+                                    "checksum": [
+                                        
+                                    ],
+                                    "path": "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\utest_2.13\\0.7.10\\utest_2.13-0.7.10.jar"
+                                },
+                                {
+                                    "name": "utest_2.13",
+                                    "classifier": [
+                                        "sources"
+                                    ],
+                                    "checksum": [
+                                        
+                                    ],
+                                    "path": "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\utest_2.13\\0.7.10\\utest_2.13-0.7.10-sources.jar"
+                                }
+                            ]
+                        },
+                        {
+                            "organization": "org.scala-lang",
+                            "name": "scala-reflect",
+                            "version": "2.13.4",
+                            "configurations": [
+                                
+                            ],
+                            "artifacts": [
+                                {
+                                    "name": "scala-reflect",
+                                    "classifier": [
+                                        
+                                    ],
+                                    "checksum": [
+                                        
+                                    ],
+                                    "path": "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-reflect\\2.13.4\\scala-reflect-2.13.4.jar"
+                                },
+                                {
+                                    "name": "scala-reflect",
+                                    "classifier": [
+                                        "sources"
+                                    ],
+                                    "checksum": [
+                                        
+                                    ],
+                                    "path": "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-reflect\\2.13.4\\scala-reflect-2.13.4-sources.jar"
+                                }
+                            ]
+                        },
+                        {
+                            "organization": "org.portable-scala",
+                            "name": "portable-scala-reflect_2.13",
+                            "version": "0.1.1",
+                            "configurations": [
+                                
+                            ],
+                            "artifacts": [
+                                {
+                                    "name": "portable-scala-reflect_2.13",
+                                    "classifier": [
+                                        
+                                    ],
+                                    "checksum": [
+                                        
+                                    ],
+                                    "path": "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\portable-scala\\portable-scala-reflect_2.13\\0.1.1\\portable-scala-reflect_2.13-0.1.1.jar"
+                                },
+                                {
+                                    "name": "portable-scala-reflect_2.13",
+                                    "classifier": [
+                                        "sources"
+                                    ],
+                                    "checksum": [
+                                        
+                                    ],
+                                    "path": "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\portable-scala\\portable-scala-reflect_2.13\\0.1.1\\portable-scala-reflect_2.13-0.1.1-sources.jar"
+                                }
+                            ]
+                        },
+                        {
+                            "organization": "org.scala-lang",
+                            "name": "scala-library",
+                            "version": "2.13.6",
+                            "configurations": [
+                                
+                            ],
+                            "artifacts": [
+                                {
+                                    "name": "scala-library",
+                                    "classifier": [
+                                        
+                                    ],
+                                    "checksum": [
+                                        
+                                    ],
+                                    "path": "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.6\\scala-library-2.13.6.jar"
+                                },
+                                {
+                                    "name": "scala-library",
+                                    "classifier": [
+                                        "sources"
+                                    ],
+                                    "checksum": [
+                                        
+                                    ],
+                                    "path": "C:\\Users\\Guillaume\\AppData\\Local\\Coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.6\\scala-library-2.13.6-sources.jar"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "tags": [
+                [
+                    "test"
+                ]
+            ]
+        }
+    },
+    "valueHash": -1395809550,
+    "inputsHash": 860964259
+}
