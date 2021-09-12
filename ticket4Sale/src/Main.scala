@@ -7,8 +7,8 @@ import scala.io.Source
 /** Given that:
   * 1- this is the only use of json in the application
   * 2- The structure of this json is nothing like other structures in the application
-  * I decided to write this json directly rather than implementing a json reader & writer typeclass like I would have
-  * done in a normal production application.
+  * It would have been counter productive to implement a json reader & writer typeclass for a new case class created
+  * specifically to match the expected structure of the output json. I decided to create the json like this instead:
   */
 object ShowsJSONFormatter {
   import ujson._
@@ -42,16 +42,15 @@ object ShowsJSONFormatter {
 object Ticket4Sale {
 
   def main(args: Array[String]): Unit = {
-    if (args.length < 3)
-      println("usage: ./tickets4Sale path query-date show-date")
-    val path = args(0)
-    for {
+    val result = for {
+
+      path <- if (args.length < 3) Left("usage: ./tickets4Sale path query-date show-date") else Right(args(0))
 
       queryDate <- Date(args(1)).toRight(s"Date format incorrect ${args(1)}")
       showDate <- Date(args(2)).toRight(s"Date format incorrect ${args(2)}")
 
       csvString <- Try(Source.fromFile(path)) match {
-        case Success(s) => Right(s.getLines.mkString)
+        case Success(s) => Right(s.getLines.mkString("\n"))
         case _ => Left(s"Cannot open the file $path")
       }
 
@@ -60,7 +59,12 @@ object Ticket4Sale {
         case Left(err) => Left(s"CSV parsing failed: ${err.mkString(" # ")}")
       }
 
-    } yield showInventory.query(showDate, queryDate)
+    } yield ShowsJSONFormatter(showInventory.query(queryDate, showDate))
+
+    result match {
+      case Left(err) => Console.err.println(err)
+      case Right(value) => println(value)
+    }
   }
 
 }
