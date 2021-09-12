@@ -42,11 +42,11 @@ object ShowAtDateTests extends TestSuite {
   val showInventoryEveryman = ShowInventory.fromCSV("Everyman,2018-08-01,drama").getOrElse(throw new UnknownError)
 
   val jan01 = Date.apply("2018-01-01").get
+  val jul01 = Date.apply("2018-07-01").get
   val jul10 = Date.apply("2018-07-10").get
   val jul11 = Date.apply("2018-07-11").get
   val jul12 = Date.apply("2018-07-12").get
   val jul13 = Date.apply("2018-07-13").get
-  val jul01 = Date.apply("2018-07-01").get
   val jul30 = Date.apply("2018-07-30").get
   val jul31 = Date.apply("2018-07-31").get
   val aug01 = Date.apply("2018-08-01").get

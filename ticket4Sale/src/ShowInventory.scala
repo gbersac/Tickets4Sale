@@ -24,6 +24,15 @@ case object OpenForSale extends ShowStatus
 case object SoldOut extends ShowStatus
 case object InThePast extends ShowStatus
 
+object ShowStatus {
+  def toString(s: ShowStatus): String = s match {
+    case InThePast => "in the past"
+    case OpenForSale => "open for sale"
+    case SaleNotStarted => "sale not started"
+    case SoldOut => "sold out"
+  }
+}
+
 final case class ShowAtDate(
   description: Show,
   showDate: LocalDate,
@@ -33,8 +42,9 @@ final case class ShowAtDate(
   val representationNumber: Long = description.openingDay.until(showDate, ChronoUnit.DAYS) + 1
   val daysBeforeGoingToTheShow: Long = queryDate.until(showDate, ChronoUnit.DAYS)
 
-  val ticketsAvailable =
+  val ticketsAvailable: Int =
     if (representationNumber < 0 || representationNumber > 100) 0
+    else if (daysBeforeGoingToTheShow < 5 || daysBeforeGoingToTheShow >= 25) 0
     else if (representationNumber > 60) 5
     else 10
 
