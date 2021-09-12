@@ -12,7 +12,7 @@ import scala.io.Source
   */
 object ShowsJSONFormatter {
   import ujson._
-  def apply(shows: List[ShowAtDate]): Obj = {
+  def apply(shows: Seq[ShowAtDate]): Obj = {
       val showsByGenre: Seq[Obj] =
         Map(
           "drama" -> shows.filter(_.description.genre == Drama),

@@ -2,6 +2,7 @@ package ticket4Sale
 
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
+import scala.util.Try
 
 sealed trait Genre { val price: Int }
 final case object Musical extends Genre { val price: Int = 70}
@@ -9,11 +10,23 @@ final case object Comedy extends Genre { val price: Int = 50}
 final case object Drama extends Genre { val price: Int = 40}
 
 object Genre {
-  def unapply(s: String): Option[Genre] = s match {
+  def unapply(s: String): Option[Genre] = s.toLowerCase match {
     case "musicals" | "musical" => Some(Musical)
     case "comedy" => Some(Comedy)
     case "drama" => Some(Drama)
     case _ => None
+  }
+
+  import zamblauskas.csv.parser._
+  implicit val csvGenreRead: Reads[Genre] = new Reads[Genre] {
+    def read(column: Column): ReadResult[Genre] = Try[ReadResult[Genre]] {
+      Genre.unapply(column.value) match {
+        case Some(value) => ReadSuccess(value)
+        case None => ReadFailure("Incorrect format. Expected yyyy-M-dd")
+      }
+    }.getOrElse {
+      ReadFailure("Cannot convert to date")
+    }
   }
 
 }
@@ -67,27 +80,23 @@ final case class Show(title: String, openingDay: LocalDate, genre: Genre) {
   def stateAtDate(showDate: LocalDate, queryDate: LocalDate): ShowAtDate = ShowAtDate(this, showDate, queryDate)
 }
 
-final case class ShowInventory(shows: List[Show]) {
+final case class ShowInventory(shows: Seq[Show]) {
   // If queryDate > showDate
-  def query(showDate: LocalDate, queryDate: LocalDate): List[ShowAtDate] =
+  def query(showDate: LocalDate, queryDate: LocalDate): Seq[ShowAtDate] =
     shows.filter(s => s.openingDay.isBefore(showDate) || s.openingDay.isEqual(showDate))
       .map(_.stateAtDate(showDate, queryDate))
 }
 
 object ShowInventory {
+  import zamblauskas.csv.parser._
+  import Date.csvDateRead
 
-  def fromCSV(s: String): Either[List[String], ShowInventory] = {
-    val lines = s.split("\n")
-      .filter(_ != "")
-      .map(s =>
-        s.split(",").toList match {
-          case s :: Date(d) :: Genre(x) :: Nil => Right(Show(s, d, x))
-          case _ => Left(s)
-        }
-      )
-    lines.partitionMap(identity) match {
-      case (Array(), rights) => Right(ShowInventory(rights.toList))
-      case (lefts, _)    => Left(lefts.toList)
+  private val csvHeader = "title,openingDay,genre"
+  def fromCSV(s: String): Either[String, ShowInventory] = {
+    val s2 = if (s.startsWith(csvHeader)) s else csvHeader + "\n" + s
+    Parser.parse[Show](s2) match {
+      case Right(lines) => Right(ShowInventory(lines))
+      case Left(f) => Left(s"Error on line ${f.lineNum}: ${f.message}")
     }
   }
 }

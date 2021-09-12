@@ -2,6 +2,7 @@ package ticket4Sale
 
 import utest._
 import java.time.LocalDate
+import scala.io.Source
 
 object ShowInventoryParsingTests extends TestSuite {
   val tests = Tests { test("CSV parsing") {
@@ -16,11 +17,22 @@ object ShowInventoryParsingTests extends TestSuite {
         Show("Comedy of Errors", Date("2018-07-01").get, Comedy),
         Show("Everyman", Date("2018-08-01").get, Drama),
       ))
-      assert(ShowInventory.fromCSV(s) == Right(expectedResult))
+      ShowInventory.fromCSV(s) ==> Right(expectedResult)
     }
 
     test("with an empty file") {
-      assert(ShowInventory.fromCSV("") == Right(ShowInventory(List())))
+      ShowInventory.fromCSV("") ==> Right(ShowInventory(List()))
+    }
+
+    test("with the example from the mail") {
+      val s = Source.fromFile("instructions/shows-21_22.csv").getLines.mkString("\n")
+      val expectedResult = ShowInventory(List(
+        Show("1984", Date("2021-10-13").get, Drama),
+        Show("39 STEPS, THE ", Date("2021-11-09").get, Comedy),
+        Show("A MIDSUMMER NIGHT’S DREAM - IN NEW ORLEANS", Date("2022-04-28").get, Drama),
+        Show("ANNIE JR", Date("2022-03-11").get, Musical)
+      ))
+      ShowInventory.fromCSV(s).map(si => ShowInventory(si.shows.take(4))) ==> Right(expectedResult)
     }
 
     test("with an erroneous file") {
@@ -29,8 +41,8 @@ object ShowInventoryParsingTests extends TestSuite {
              |Comedy of Errors,2018-07-01
              |Everyman,2018-08-01,drama
              |""".stripMargin
-      val expectedResult = Left(List("Cats,2018-06-0,musical", "Comedy of Errors,2018-07-01"))
-      assert(ShowInventory.fromCSV(s) == expectedResult)
+      val expectedResult = Left("Error on line 0: Incorrect format. Expected yyyy-M-dd")
+      ShowInventory.fromCSV(s) ==> expectedResult
     }
   }}
 }
