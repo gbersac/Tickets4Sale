@@ -1,4 +1,4 @@
-package ticket4Sale
+package tickets4Sale
 
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit

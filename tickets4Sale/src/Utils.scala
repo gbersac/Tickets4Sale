@@ -1,4 +1,4 @@
-package ticket4Sale
+package tickets4Sale
 
 import scala.util.Try
 import java.time.LocalDate

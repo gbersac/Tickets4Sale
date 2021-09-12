@@ -1,4 +1,4 @@
-package ticket4Sale
+package tickets4Sale
 
 import scala.util.Try
 import scala.util.Success
@@ -39,7 +39,7 @@ object ShowsJSONFormatter {
   }
 }
 
-object Ticket4Sale {
+object Tickets4Sale {
 
   def main(args: Array[String]): Unit = {
     val result = for {

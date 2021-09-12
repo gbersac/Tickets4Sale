@@ -1,7 +1,7 @@
 // build.sc
 import mill._, scalalib._
 
-object ticket4Sale extends ScalaModule {
+object tickets4Sale extends ScalaModule {
   def scalaVersion = "2.13.6"
   override def ammoniteVersion = "2.4.0"
   def ivyDeps = Agg(

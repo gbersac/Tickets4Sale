@@ -1,4 +1,4 @@
-package ticket4Sale
+package tickets4Sale
 
 import utest._
 import upickle.default._
